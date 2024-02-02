@@ -1,12 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style.css" />
-      <title>Document</title>
-   </head>
-   <body>
-      <script src="script.js"></script>
-   </body>
-</html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__col">
+				<a href="#" class="header__logo"><img src="images/logo.png"
+						alt="Logo" /></a>
+				<form action="#">
+					<div class="search-input">
+						<input placeholder="Поиск..." type="text" id="mainSearch" />
+					</div>
+				</form>
+			</div>
+			<div class="header__col">
+				<a href="#" class="header__btn-chat"><img src="images/icons/Chat.svg"
+						alt="Chat" /></a>
+				<a href="#" class="header__btn-bell"><img src="images/icons/Bell.svg"
+						alt="Notification" /></a>
+				<div href class="header__profile">
+					<span class="header__profile-image"><img src="images/avatar.png" /></span>
+					<span class="header__profile-name">Саша Смелая</span>
+					<a href="#"><img src="images/icons/Down_Arrow.svg" /></a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="links">
+				<ul class="links-list">
+					<li class="link-item"><a href="#" class="btn active"><img
+								src="images/icons/Home.svg" alt class="link-img">Главная</a></li>
+					<li class="link-item"><a href="#" class="btn queries"><img
+								src="images/icons/List.svg" alt class="link-img">Запросы</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Tag.svg" alt class="link-img">Заметки</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Folder.svg" alt class="link-img">Категории</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Users.svg" alt class="link-img">Пользователи</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Statistics.svg" alt
+								class="link-img">Статистика</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Star.svg" alt class="link-img">Избранное</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Chat.svg" alt class="link-img">Поддержка</a></li>
+					<li class="section-name">Информация</li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Question.svg" alt class="link-img">База
+							знаний</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Ribbon.svg" alt class="link-img">Обновления</a></li>
+					<li class="section-name">Настройки</li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/User.svg" alt class="link-img">Профиль</a></li>
+					<li class="link-item"><a href="#" class="btn"><img
+								src="images/icons/Settings.svg" alt class="link-img">Общие
+							настройки</a></li>
+				</ul>
+			</section>
+			<section class="profil-settings">
+				<a href="#" class="back"><img src="images/icons/Back_Arrow.svg"
+						alt>Назад</a>
+				<div class="title">Настройки профиля</div>
+				<ul class="links-list">
+					<li class="link-item"><a href="#" class="btn active">Первичная
+							настройка</a></li>
+					<li class="link-item"><a href="#" class="btn">Профиль пользователя</a></li>
+					<li class="link-item"><a href="#" class="btn">Изменение общих
+							настроек</a></li>
+					<li class="link-item"><a href="#" class="btn">Дополнительные
+							возможности</a></li>
+					<li class="link-item"><a href="#" class="btn">Отправка запросов</a></li>
+					<li class="link-item"><a href="#" class="btn">Работа со
+							стастистикой</a></li>
+				</section>
+				<section class="content">
+					<form action="#">
+						<div class="search-input">
+							<input placeholder="Поиск..." type="text" id="mainSearch" />
+						</div>
+					</form>
+					<div class="wripper">
+						<section class="block">
+							<div class="title">Первичная настройка</div>
+							<div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Distinctio facilis minima necessitatibus ducimus illo sed quo
+								deserunt excepturi sunt non enim inventore aliquam esse asperiores ea
+								dolorem quibusdam labore quos facere iusto, obcaecati doloremque aliquid
+								est.</div>
+							<div class="recomm">
+								<p>Рекомендации:</p>
+								<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.
+									Fugiat.</p>
+							</div>
+						</section>
+						<section class="block">
+							<div class="title">Начало работы</div>
+							<div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque
+								tempore facilis repellendus harum reiciendis.</div>
+							<ol class="steps-list">
+								<li class="step">Lorem, ipsum dolor sit amet consectetur adipisicing
+									elit. Similique, doloribus, nulla. Soluta error repudiandae cumque
+									veniam fugiat, voluptatem repellat provident, pariatur.</li>
+								<li class="step">Lorem ipsum dolor sit amet consectetur adipisicing
+									elit. Facilis harum delectus nemo iure praesentium amet, maxime
+									veniam.</li>
+								<li class="step">Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit. Repellendus aut nam earum! Lorem ipsum dolor sit amet.</li>
+								</щl>
+							</section>
+							<section class="block">
+								<div class="title">Дополнительная информация</div>
+								<div class="tab">
+									<div class="tab-content" id="content-1">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+											facilis minima necessitatibus ducimus illo sed quo deserunt excepturi
+											sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam
+											est.</p>
+										<br>
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
+											fugiat.</p>
+									</div>
+									<div class="tab-content" id="content-2">
+										<p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Distinctio
+											facilis minima necessitatibus ducimus illo sed quo deserunt excepturi
+											sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam
+											est.</p>
+										<br>
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
+											fugiat.</p>
+									</div>
+									<div class="tab-content" id="content-3">
+										<p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Distinctio
+											facilis minima necessitatibus ducimus illo sed quo deserunt excepturi
+											sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam
+											est.</p>
+										<br>
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
+											fugiat.</p>
+											<br>
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
+											fugiat.</p>
+											<br>
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
+											fugiat.</p>
+											<br>
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
+											fugiat.</p>
+									</div>
+									<div class="tab-nav">
+										<input checked id="tab-btn-1" name="tab-btn" type="radio" value>
+										<label for="tab-btn-1">Пункт 11</label>
+										<input id="tab-btn-2" name="tab-btn" type="radio" value>
+										<label for="tab-btn-2">Пункт 10</label>
+										<input id="tab-btn-3" name="tab-btn" type="radio" value>
+										<label for="tab-btn-3">Пункт 9</label>
+									</div>
+								</div>
+
+							</section>
+						</div>
+						<div class="question">
+							<section class="block">
+								<div class="title">Вам помогла эта статья?</div>
+								<div class="buttons">
+									<a href="#" class="btn btn-b">Да</a>
+									<a href="#" class="btn btn-b">Нет</a>
+								</div>
+								<div class="count-help">50 людям помогла эта статья</div>
+							</section>
+						</div>
+						<footer class="footer">
+							<div class="col">
+								<div class="title">Сообщество GB</div>
+								<div class="sub-title">Обращайтесь за помощью к членам сообщества,
+									задавайте любые вопросы и получайте ответы.</div>
+								<a href="#" class="footer-link">Присоединиться к сообществу</a>
+							</div>
+
+							<div class="col">
+								<div class="title">GB Connect</div>
+								<div class="sub-title">Пользуйтесь всеми возможностями GB. Пройдите
+									регистрацию в GB Connect.</div>
+								<a href="#" class="footer-link">Регистрация</a>
+							</div>
+
+						</footer>
+					</section>
+				</main>
+				<script src="script.js"></script>
+			</body>
+		</html>
