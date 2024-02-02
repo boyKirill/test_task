@@ -267,7 +267,7 @@ main {
 }
 
 .search-input input {
-   background: url("/images/icons/Search.svg") 16px 50% #ffffff no-repeat;
+   background: url("./images/icons/Search.svg") 16px 50% #ffffff no-repeat;
    flex: 1 1 auto;
    font-size: 14px;
    padding: 8px;
