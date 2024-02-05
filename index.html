@@ -17,95 +17,110 @@
 				<a href="#" class="header__logo"><img src="images/logo.png"
 						alt="Logo" /></a>
 				<form action="#">
-					<div class="search-input">
+					<label class="search-input">
+						<span class="input-label unvisible">Поиск</span>
 						<input placeholder="Поиск..." type="text" id="mainSearch" />
-					</div>
+					</label>
 				</form>
-			</div>
-			<div class="header__col">
-				<a href="#" class="header__btn-chat"><img src="images/icons/Chat.svg"
-						alt="Chat" /></a>
-				<a href="#" class="header__btn-bell"><img src="images/icons/Bell.svg"
-						alt="Notification" /></a>
-				<div href class="header__profile">
-					<span class="header__profile-image"><img src="images/avatar.png" /></span>
-					<span class="header__profile-name">Саша Смелая</span>
-					<a href="#"><img src="images/icons/Down_Arrow.svg" /></a>
+				<div class="header__menu">
+					<a href="#" class="header__btn-chat"><img src="images/icons/Chat.svg"
+							alt="Chat" /></a>
+					<a href="#" class="header__btn-bell"><img src="images/icons/Bell.svg"
+							alt="Notification" /></a>
+					<a href class="header__profile">
+						<span class="header__profile-image"><img src="images/avatar.png" /></span>
+						<span class="header__profile-name">Саша Смелая</span>
+					</a>
+					<a class="settings" href="#"><img src="images/icons/Down_Arrow.svg" /></a>
 				</div>
+
 			</div>
 		</header>
 		<main>
 			<section class="links">
-				<ul class="links-list">
-					<li class="link-item"><a href="#" class="btn active"><img
-								src="images/icons/Home.svg" alt class="link-img">Главная</a></li>
-					<li class="link-item"><a href="#" class="btn queries"><img
-								src="images/icons/List.svg" alt class="link-img">Запросы</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Tag.svg" alt class="link-img">Заметки</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Folder.svg" alt class="link-img">Категории</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Users.svg" alt class="link-img">Пользователи</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Statistics.svg" alt
-								class="link-img">Статистика</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Star.svg" alt class="link-img">Избранное</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Chat.svg" alt class="link-img">Поддержка</a></li>
-					<li class="section-name">Информация</li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Question.svg" alt class="link-img">База
-							знаний</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Ribbon.svg" alt class="link-img">Обновления</a></li>
-					<li class="section-name">Настройки</li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/User.svg" alt class="link-img">Профиль</a></li>
-					<li class="link-item"><a href="#" class="btn"><img
-								src="images/icons/Settings.svg" alt class="link-img">Общие
-							настройки</a></li>
-				</ul>
+				<section>
+					<h2 class="section-name unvisible"></h2>
+					<menu class="menu-links">
+						<li class="link-item"><a href="#" class="link active"><img
+									src="images/icons/Home.svg" alt class="link-img">Главная</a></li>
+						<li class="link-item"><a href="#" class="link queries"><img
+									src="images/icons/List.svg" alt class="link-img">Запросы</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Tag.svg" alt class="link-img">Заметки</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Folder.svg" alt class="link-img">Категории</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Users.svg" alt class="link-img">Пользователи</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Statistics.svg" alt
+									class="link-img">Статистика</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Star.svg" alt class="link-img">Избранное</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Chat.svg" alt class="link-img">Поддержка</a></li>
+					</menu>
+				</section>
+				<section>
+					<h2 class="section-name">Информация</h2>
+					<menu class="menu-links">
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Question.svg" alt class="link-img">База
+								знаний</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Ribbon.svg" alt class="link-img">Обновления</a></li>
+					</menu>
+				</section>
+				<section>
+					<h2 class="section-name">Настройки</h2>
+					<menu class="menu-links">
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/User.svg" alt class="link-img">Профиль</a></li>
+						<li class="link-item"><a href="#" class="link"><img
+									src="images/icons/Settings.svg" alt class="link-img">Общие
+								настройки</a></li>
+					</menu>
+				</section>
 			</section>
 			<section class="profil-settings">
 				<a href="#" class="back"><img src="images/icons/Back_Arrow.svg"
 						alt>Назад</a>
-				<div class="title">Настройки профиля</div>
+				<h2 class="title">Настройки профиля</h2>
 				<ul class="links-list">
-					<li class="link-item"><a href="#" class="btn active">Первичная
+					<li class="link-item"><a href="#" class="link active">Первичная
 							настройка</a></li>
-					<li class="link-item"><a href="#" class="btn">Профиль пользователя</a></li>
-					<li class="link-item"><a href="#" class="btn">Изменение общих
+					<li class="link-item"><a href="#" class="link">Профиль
+							пользователя</a></li>
+					<li class="link-item"><a href="#" class="link">Изменение общих
 							настроек</a></li>
-					<li class="link-item"><a href="#" class="btn">Дополнительные
+					<li class="link-item"><a href="#" class="link">Дополнительные
 							возможности</a></li>
-					<li class="link-item"><a href="#" class="btn">Отправка запросов</a></li>
-					<li class="link-item"><a href="#" class="btn">Работа со
+					<li class="link-item"><a href="#" class="link">Отправка запросов</a></li>
+					<li class="link-item"><a href="#" class="link">Работа со
 							стастистикой</a></li>
 				</section>
 				<section class="content">
 					<form action="#">
-						<div class="search-input">
+						<label class="search-input">
+							<span class="input-label unvisible">Поиск</span>
 							<input placeholder="Поиск..." type="text" id="mainSearch" />
-						</div>
+						</label>
 					</form>
 					<div class="wripper">
 						<section class="block">
-							<div class="title">Первичная настройка</div>
+							<h2 class="title">Первичная настройка</h2>
 							<div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing
 								elit. Distinctio facilis minima necessitatibus ducimus illo sed quo
 								deserunt excepturi sunt non enim inventore aliquam esse asperiores ea
 								dolorem quibusdam labore quos facere iusto, obcaecati doloremque aliquid
 								est.</div>
 							<div class="recomm">
-								<p>Рекомендации:</p>
+								<h3>Рекомендации:</h3>
 								<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.
 									Fugiat.</p>
 							</div>
 						</section>
 						<section class="block">
-							<div class="title">Начало работы</div>
+							<h2 class="title">Начало работы</h2>
 							<div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing
 								elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque
 								tempore facilis repellendus harum reiciendis.</div>
@@ -121,7 +136,7 @@
 								</щl>
 							</section>
 							<section class="block">
-								<div class="title">Дополнительная информация</div>
+								<h2 class="title">Дополнительная информация</h2>
 								<div class="tab">
 									<div class="tab-content" id="content-1">
 										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
@@ -154,15 +169,15 @@
 										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
 											fugiat.</p>
-											<br>
+										<br>
 										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
 											fugiat.</p>
-											<br>
+										<br>
 										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
 											fugiat.</p>
-											<br>
+										<br>
 										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 											Similique, doloribus, nulla. Soluta error repudiandae cumque veniam
 											fugiat.</p>
@@ -181,29 +196,27 @@
 						</div>
 						<div class="question">
 							<section class="block">
-								<div class="title">Вам помогла эта статья?</div>
-								<div class="buttons">
-									<a href="#" class="btn btn-b">Да</a>
-									<a href="#" class="btn btn-b">Нет</a>
-								</div>
+								<h2 class="title">Вам помогла эта статья?</h2>
+								<form action="#" class="buttons">
+									<button class="question-btn" value="yes">Да</button>
+									<button class="question-btn" value="no">Нет</button>
+								</form>
 								<div class="count-help">50 людям помогла эта статья</div>
 							</section>
 						</div>
 						<footer class="footer">
 							<div class="col">
-								<div class="title">Сообщество GB</div>
+								<h2 class="title">Сообщество GB</h2>
 								<div class="sub-title">Обращайтесь за помощью к членам сообщества,
 									задавайте любые вопросы и получайте ответы.</div>
 								<a href="#" class="footer-link">Присоединиться к сообществу</a>
 							</div>
-
 							<div class="col">
-								<div class="title">GB Connect</div>
+								<h2 class="title">GB Connect</h2>
 								<div class="sub-title">Пользуйтесь всеми возможностями GB. Пройдите
 									регистрацию в GB Connect.</div>
 								<a href="#" class="footer-link">Регистрация</a>
 							</div>
-
 						</footer>
 					</section>
 				</main>
