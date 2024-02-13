@@ -12,31 +12,41 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<header class="header">
-			<div class="header__col">
+		<main class="container">
+			<header class="header">
 				<a href="#" class="header__logo"><img src="images/logo.png"
 						alt="Logo" /></a>
-				<form action="#">
+				<form action="#" class="header__form">
 					<label class="search-input">
 						<span class="input-label unvisible">Поиск</span>
 						<input placeholder="Поиск..." type="text" id="mainSearch" />
 					</label>
 				</form>
+				<div class="burger">
+					<img src="./images/icons/hamburger.svg" alt>
+				</div>
 				<div class="header__menu">
 					<a href="#" class="header__btn-chat"><img src="images/icons/Chat.svg"
 							alt="Chat" /></a>
 					<a href="#" class="header__btn-bell"><img src="images/icons/Bell.svg"
 							alt="Notification" /></a>
 					<a href class="header__profile">
-						<span class="header__profile-image"><img src="images/avatar.png" /></span>
+						<span class="header__profile-image"><img
+								src="images/avatar.png" /></span>
 						<span class="header__profile-name">Саша Смелая</span>
 					</a>
-					<a class="settings" href="#"><img src="images/icons/Down_Arrow.svg" /></a>
+					<a class="settings" href="#"><img src="images/icons/Down_Arrow.svg" />
+					</a>
+					<form action="#" class="form-in-burger">
+						<label class="search-input">
+							<span class="input-label unvisible">Поиск</span>
+							<input placeholder="Поиск..." type="text" id="mainSearch" />
+						</label>
+					</form>
+					<div class="closer"></div>
 				</div>
 
-			</div>
-		</header>
-		<main>
+			</header>
 			<section class="links">
 				<section>
 					<h2 class="section-name unvisible"></h2>
@@ -50,7 +60,8 @@
 						<li class="link-item"><a href="#" class="link"><img
 									src="images/icons/Folder.svg" alt class="link-img">Категории</a></li>
 						<li class="link-item"><a href="#" class="link"><img
-									src="images/icons/Users.svg" alt class="link-img">Пользователи</a></li>
+									src="images/icons/Users.svg" alt
+									class="link-img">Пользователи</a></li>
 						<li class="link-item"><a href="#" class="link"><img
 									src="images/icons/Statistics.svg" alt
 									class="link-img">Статистика</a></li>
@@ -108,10 +119,12 @@
 					<div class="wripper">
 						<section class="block">
 							<h2 class="title">Первичная настройка</h2>
-							<div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing
+							<div class="sub-title">Lorem ipsum dolor sit amet consectetur
+								adipisicing
 								elit. Distinctio facilis minima necessitatibus ducimus illo sed quo
 								deserunt excepturi sunt non enim inventore aliquam esse asperiores ea
-								dolorem quibusdam labore quos facere iusto, obcaecati doloremque aliquid
+								dolorem quibusdam labore quos facere iusto, obcaecati doloremque
+								aliquid
 								est.</div>
 							<div class="recomm">
 								<h3>Рекомендации:</h3>
@@ -121,7 +134,8 @@
 						</section>
 						<section class="block">
 							<h2 class="title">Начало работы</h2>
-							<div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing
+							<div class="sub-title">Lorem ipsum dolor sit amet consectetur
+								adipisicing
 								elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque
 								tempore facilis repellendus harum reiciendis.</div>
 							<ol class="steps-list">
@@ -139,8 +153,10 @@
 								<h2 class="title">Дополнительная информация</h2>
 								<div class="tab">
 									<div class="tab-content" id="content-1">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-											facilis minima necessitatibus ducimus illo sed quo deserunt excepturi
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											Distinctio
+											facilis minima necessitatibus ducimus illo sed quo deserunt
+											excepturi
 											sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam
 											est.</p>
 										<br>
@@ -151,7 +167,8 @@
 									<div class="tab-content" id="content-2">
 										<p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
 											Distinctio
-											facilis minima necessitatibus ducimus illo sed quo deserunt excepturi
+											facilis minima necessitatibus ducimus illo sed quo deserunt
+											excepturi
 											sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam
 											est.</p>
 										<br>
@@ -162,7 +179,8 @@
 									<div class="tab-content" id="content-3">
 										<p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
 											Distinctio
-											facilis minima necessitatibus ducimus illo sed quo deserunt excepturi
+											facilis minima necessitatibus ducimus illo sed quo deserunt
+											excepturi
 											sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam
 											est.</p>
 										<br>

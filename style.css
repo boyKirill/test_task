@@ -140,20 +140,6 @@ button {
 
 /*-----------------*/
 
-body {
-   font-family: "Inter", sans-serif;
-   font-size: 16px;
-   font-weight: 400;
-   background-color: #f5f6fa;
-   display: flex;
-   flex-direction: column;
-}
-
-main {
-   flex: 1 1 auto;
-   display: flex;
-}
-
 .link {
    display: inline-block;
    padding: 12px 24px;
@@ -208,35 +194,78 @@ main {
    background-color: #336dff;
 } */
 
-.header {
+body {
    display: flex;
+   justify-content: center;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   background-color: #f5f6fa;
+}
+.container {
+   display: grid;
+   column-gap: 30px;
+   grid-template-rows: auto 1fr;
+   grid-template-columns: 250px auto minmax(auto, 1000px);
+   grid-template-areas:
+      "header header   header"
+      "menu   settings content";
+}
+
+.header {
+   grid-area: header;
+   display: grid;
    padding: 16px 28px 16px 20px;
    justify-content: space-between;
    align-items: center;
    height: 68px;
+   width: 100%;
    background-color: #ffffff;
    box-sizing: border-box;
-}
-
-.header__col {
-   display: flex;
-   align-items: center;
+   grid-template-columns: auto 1fr;
+   grid-template-rows: auto;
+   grid-template-areas: "logo head-form head-menu";
    gap: 100px;
-   width: 100%;
-}
-
-.header form {
-   flex: 1;
 }
 
 .header__logo {
+   grid-area: logo;
+}
+
+.burger {
+   display: none;
+}
+
+.closer {
+   display: none;
+}
+
+.burger {
+   display: none;
+   align-items: center;
+   justify-content: center;
+   background-color: transparent;
+   cursor: pointer;
+}
+
+.burger img {
+   padding: 5px;
+   width: 30px;
+}
+.burger-container {
+   grid-area: burger-container;
+   display: grid;
+   grid-template-columns: 1fr auto;
+   grid-template-areas: "head-form head-menu";
 }
 
 .header__btn-chat {
+   grid-area: chat;
    padding: 5px;
 }
 
 .header__btn-bell {
+   grid-area: bell;
    display: inline-block;
    position: relative;
    padding: 5px;
@@ -261,11 +290,18 @@ main {
 }
 
 .header__menu {
-   display: flex;
-   align-items: center;
+   grid-area: head-menu;
+   display: grid;
+   grid-template-columns: min-content min-content min-content min-content 1fr;
+   grid-template-areas: "chat bell profile settings ";
    gap: 10px;
+   align-items: center;
+   padding: 5px 10px;
+   /*   align-items: center;
+   gap: 10px; */
 }
 .header__profile {
+   grid-area: profile;
    display: flex;
    align-items: center;
    white-space: nowrap;
@@ -277,7 +313,15 @@ main {
 }
 
 .settings {
+   grid-area: settings;
    padding: 5px;
+}
+
+.form-in-burger {
+   display: none;
+}
+.header__form {
+   grid-area: head-form;
 }
 
 .search-input {
@@ -312,15 +356,8 @@ main {
 }
 
 .links {
-   display: flex;
-   flex-direction: column;
-   max-width: 250px;
-   min-width: 200px;
-   flex: 1 1 auto;
-   box-sizing: border-box;
+   grid-area: menu;
    padding: 16px;
-   /* width: 250px; */
-   height: 100%;
    border-right: 1px solid #d7dbec;
 }
 
@@ -388,10 +425,11 @@ main {
 }
 
 .profil-settings {
+   grid-area: settings;
    display: flex;
    flex-direction: column;
    width: 255px;
-   padding: 30px 30px 30px 40px;
+   padding: 30px 0 0 10px;
 }
 .back {
    font-size: 13px;
@@ -426,7 +464,7 @@ main {
 }
 
 .content {
-   flex: 1 0;
+   grid-area: content;
    display: flex;
    flex-direction: column;
    padding: 72px 30px 30px 0;
@@ -448,17 +486,15 @@ main {
 }
 
 .footer {
-   display: flex;
-   align-items: flex-start;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
    gap: 29px;
 }
 .col {
-   width: 50%;
    background-color: #ffffff;
    border-radius: 10px;
    padding: 28px;
-   max-width: 500px;
-   min-width: 160px;
 }
 
 .col .sub-title {
@@ -520,24 +556,23 @@ main {
 }
 
 .step {
-   padding-left: 60px;
    position: relative;
    font-size: 16px;
    font-weight: 400;
    line-height: 24px;
    letter-spacing: 0px;
    color: #131523;
+   display: flex;
+   gap: 24px;
 }
 
 .step::before {
-   position: absolute;
    display: flex;
    align-items: center;
    justify-content: center;
    counter-increment: num;
    content: counter(num);
-   top: 0;
-   left: 0;
+   min-width: 36px;
    width: 36px;
    height: 36px;
    border-radius: 50%;
@@ -593,12 +628,10 @@ main {
    text-decoration: none;
    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out;
+   position: relative;
 }
 
 .tab-nav > input[type="radio"] + label::before {
-   position: absolute;
-   bottom: -1px;
-   left: 0;
    content: "";
    width: 0%;
    height: 1px;
@@ -610,14 +643,12 @@ main {
 .tab-nav > input[type="radio"]:checked + label {
    color: #1e5eff;
    cursor: pointer;
-   position: relative;
 }
 
 .tab-nav > input[type="radio"]:checked + label::before {
    position: absolute;
    bottom: -1px;
    left: 0;
-   content: "";
    width: 100%;
    height: 2px;
    background-color: #1e5eff;
@@ -650,4 +681,193 @@ main {
    font-weight: 400;
    line-height: 16px;
    color: #5a607f;
+}
+
+@media screen and (max-width: 1100px) {
+   .container {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: auto minmax(auto, 1000px);
+      grid-template-areas:
+         "header header"
+         "settings   content "
+         "settings   content ";
+   }
+
+   .header {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "logo head-form burger";
+      gap: 20px;
+   }
+
+   .header__menu {
+      grid-template-areas: "profile settings chat bell";
+      gap: 10px;
+      align-items: center;
+      padding: 15px;
+   }
+
+   .burger {
+      display: block;
+   }
+
+   .closer {
+      display: block;
+      position: fixed;
+      right: 30px;
+      top: 18px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      pointer-events: none;
+   }
+
+   .closer.active {
+      pointer-events: all;
+   }
+
+   .closer::after,
+   .closer::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      border-radius: 10px;
+      background-color: #3a3c48;
+   }
+
+   .closer::after {
+      transform: translateY(0) rotate(0);
+      transition: transform ease 0.2s;
+   }
+   .closer.active::after {
+      transform: translateY(12px) rotate(45deg);
+   }
+   .closer::before {
+      transform: translateY(0) rotate(0);
+      transition: transform ease-in-out 0.1s;
+   }
+   .closer.active::before {
+      transform: translateY(12px) rotate(-45deg);
+   }
+
+   .header__menu {
+      grid-area: head-menu;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 100%;
+      opacity: 0;
+      z-index: 1999;
+      transition: left ease-in-out 0.5s;
+      padding: 10px;
+   }
+
+   .header__menu.active {
+      left: 0;
+      opacity: 1;
+   }
+   .links {
+      position: fixed;
+      right: 100%;
+      z-index: 980;
+      border: none;
+   }
+
+   .links.active {
+      padding-top: 70px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #eaedf9;
+      transition: right ease-in-out 0.5s;
+   }
+
+   .profil-settings {
+      padding-left: 30px;
+   }
+
+   .content {
+      padding: 30px;
+   }
+}
+
+@media screen and (max-width: 750px) {
+   .container {
+      grid-template-rows: auto 1fr;
+      grid-template-columns: auto minmax(auto, 1000px);
+      grid-template-areas:
+         "header header"
+         "settings  settings"
+         "content   content";
+   }
+   .header {
+      justify-content: space-between;
+      grid-template-columns: auto auto;
+      grid-template-areas: "logo  burger";
+   }
+
+   .header__menu {
+      grid-template-areas:
+         "profile settings chat bell  ..."
+         "head-form head-form head-form head-form head-form";
+      gap: 10px;
+      align-items: center;
+      padding: 15px;
+   }
+
+   .header__form {
+      display: none;
+   }
+
+   .form-in-burger {
+      border: 1px solid #d7dbec;
+      border-radius: 5px;
+      grid-area: head-form;
+      display: block;
+   }
+
+   .links.active {
+      padding-top: 130px;
+   }
+}
+
+@media screen and (max-width: 530px) {
+   .footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+   }
+}
+
+@media screen and (max-width: 410px) {
+   .header__menu {
+      grid-template-areas:
+         "profile settings .."
+         "bell chat .."
+         "head-form head-form head-from";
+   }
+   .settings {
+      position: relative;
+   }
+
+   .settings:hover > span {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+   }
+
+   .tab-nav > label {
+      margin-right: 10px;
+      font-size: 12px;
+   }
 }

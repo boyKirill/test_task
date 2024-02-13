@@ -28,3 +28,20 @@ for (let i = 0; i < listLinks2.length; i++) {
 
 	})
 }
+
+let burger = document.querySelector('.burger');
+let burgerContent = document.querySelector('.header__menu');
+let closer = document.querySelector('.closer');
+let links = document.querySelector('.links');
+burger.addEventListener('click', () => {
+	burgerContent.classList.add('active');
+	links.classList.add('active');
+	closer.classList.add('active');
+});
+
+closer.addEventListener('click', () => {
+	burgerContent.classList.remove('active');
+	links.classList.remove('active');
+	closer.classList.remove('active');
+});
+
