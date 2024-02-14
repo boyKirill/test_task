@@ -32,16 +32,19 @@ for (let i = 0; i < listLinks2.length; i++) {
 let burger = document.querySelector('.burger');
 let burgerContent = document.querySelector('.header__menu');
 let closer = document.querySelector('.closer');
+let content = document.querySelector('.content');
 let links = document.querySelector('.links');
 burger.addEventListener('click', () => {
 	burgerContent.classList.add('active');
 	links.classList.add('active');
 	closer.classList.add('active');
+	document.body.classList.add('hidden');
 });
 
 closer.addEventListener('click', () => {
 	burgerContent.classList.remove('active');
 	links.classList.remove('active');
 	closer.classList.remove('active');
+	document.body.classList.remove('hidden');
 });
 

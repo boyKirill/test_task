@@ -201,6 +201,11 @@ body {
    font-size: 16px;
    font-weight: 400;
    background-color: #f5f6fa;
+   overflow-x: hidden;
+}
+
+body.hidden {
+   overflow-y: hidden;
 }
 .container {
    display: grid;
@@ -783,6 +788,7 @@ body {
       right: 0;
       background-color: #eaedf9;
       transition: right ease-in-out 0.5s;
+      overflow: auto;
    }
 
    .profil-settings {
