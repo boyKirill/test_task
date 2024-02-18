@@ -201,7 +201,7 @@ body {
    font-size: 16px;
    font-weight: 400;
    background-color: #f5f6fa;
-   overflow-x: hidden;
+   overflow: hidden;
 }
 
 body.hidden {
@@ -220,10 +220,10 @@ body.hidden {
 .header {
    grid-area: header;
    display: grid;
-   padding: 16px 28px 16px 20px;
+   padding: 7px 28px 7px 20px;
    justify-content: space-between;
    align-items: center;
-   height: 68px;
+
    width: 100%;
    background-color: #ffffff;
    box-sizing: border-box;
@@ -469,10 +469,11 @@ body.hidden {
 }
 
 .content {
+   overflow-y: auto;
    grid-area: content;
    display: flex;
    flex-direction: column;
-   padding: 72px 30px 30px 0;
+   padding: 72px 30px 72px 0;
 }
 
 .question-btn {
@@ -801,6 +802,12 @@ body.hidden {
 }
 
 @media screen and (max-width: 750px) {
+   body {
+      overflow-y: auto;
+   }
+   .content {
+      overflow-y: unset;
+   }
    .container {
       grid-template-rows: auto 1fr;
       grid-template-columns: auto minmax(auto, 1000px);
